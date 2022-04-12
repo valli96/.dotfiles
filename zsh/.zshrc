@@ -13,13 +13,26 @@ source ~/.zsh_plugins.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias ra="ranger"
-alias ll="ls -alh"
-# alias mo="mosquitto_pub -h 192.168.178.46 -t cmnd/Light_1/Dimmer -m "
+alias ll="ls -alh --color=tty"
+alias ls="ls -h --color=tty"
+alias vim="nvim"
+alias vi="nvim"
+alias lock='systemctl suspend && exec i3-msg --color=000103'
 
 Light_dimm() {
- mosquitto_pub -h 192.168.178.46 -t cmnd/Light_1/Dimmer -m $1
+ mosquitto_pub -h 192.168.178.41 -t cmnd/Light_1/Dimmer -m $1
 }
 
 Light_color() {
- mosquitto_pub -h 192.168.178.46 -t cmnd/Light_1/Color -m $1    
+ mosquitto_pub -h 192.168.178.41 -t cmnd/Light_1/Color -m $1    
 }
+
+Light_white() {
+ y=$(python -c "print(int((${1}*3.47+150)))")
+ mosquitto_pub -h 192.168.178.41 -t cmnd/Light_1/CT -m $y
+}
+
+
+source /opt/ros/noetic/setup.zsh
+
+

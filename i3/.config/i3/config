@@ -223,7 +223,7 @@ bindsym $mod+shift+f exec firefox
 
 # bindsym --release $mod+Shift+a exec ~/my_scrips/PWD_screenshot.sh
 
-bindsym --release $mod+Shift+p exec mosquitto_pub -h 192.168.178.46 -t cmnd/Light_1/POWER -m toggle
+bindsym --release $mod+Shift+p exec mosquitto_pub -h 192.168.178.41 -t cmnd/Light_1/POWER -m toggle
 
 bindsym --release $mod+z exec xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output HDMI-2 --off
 
