@@ -9,8 +9,13 @@ fi
 # source zsh plugins
 source ~/.zsh_plugins.sh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+HISTFILE=~/.zsh_history
+HISTSIZE=20000
+SAVEHIST=20000
+setopt appendhistory
+
 
 alias ra="ranger"
 alias ll="ls -alh --color=tty"
@@ -33,6 +38,10 @@ Light_white() {
 }
 
 
+# for ros
 source /opt/ros/noetic/setup.zsh
+export TURTLEBOT3_MODEL=waffle_pi
 
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

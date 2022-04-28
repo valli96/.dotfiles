@@ -28,10 +28,9 @@ stow nvim
 stow git
 stow zsh
 stow i3
+stow tmux
 
 
 # # install neovim plugins
 # nvim --headless +PlugInstall +qall
 
-# # Use kitty terminal on MacOS
-# [ `uname -s` = 'Darwin' ] && stow kitty
