@@ -23,6 +23,7 @@ alias ls="ls -h --color=tty"
 alias vim="nvim"
 alias vi="nvim"
 alias lock='systemctl suspend && exec i3-msg --color=000103'
+alias gitlog="git log --graph --oneline --all --decorate"
 
 Light_dimm() {
  mosquitto_pub -h 192.168.178.41 -t cmnd/Light_1/Dimmer -m $1
