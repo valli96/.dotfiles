@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/valenitn/catkin_ws_project/src/elevation_mapping/elevation_mapping_demos/sample_data'
 let g:netrw_dirhist_3='/home/valenitn/Zotero/storage/EIJUWIQG'
 let g:netrw_dirhist_2='/home/valenitn/.xournal'
 let g:netrw_dirhist_1='/home/valenitn/NewProject'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_8='/home/valenitn/.config/nvim/snips/tex.snippets'
 let g:netrw_dirhist_7='/home/valenitn/my_scrips/current_test'
 let g:netrw_dirhist_6='/home/valenitn/my_scrips/make_screenshot_at_the_current_place.sh'
 let g:netrw_dirhist_5='/home/valenitn/.ankivim'
-let g:netrw_dirhist_4='/home/valenitn'

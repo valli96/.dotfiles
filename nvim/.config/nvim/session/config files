@@ -7,12 +7,13 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 ~/.dotfiles/i3/.config/i3/config
-badd +463 ~/.config/ranger/rc.conf
-badd +1 ~/.dotfiles/zsh/.zshrc
+badd +199 ~/.dotfiles/i3/.config/i3/config
+badd +770 ~/.config/ranger/rc.conf
+badd +3 ~/.dotfiles/zsh/.zshrc
+badd +0 ~/.dotfiles/i3/.config/i3/i3blocks.conf
 argglobal
 %argdel
-edit ~/.dotfiles/zsh/.zshrc
+edit ~/.dotfiles/i3/.config/i3/i3blocks.conf
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -29,11 +30,11 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 26 - ((10 * winheight(0) + 17) / 34)
+let s:l = 50 - ((24 * winheight(0) + 17) / 34)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-26
+50
 normal! 0
 if exists(':tcd') == 2 | tcd ~/.config/nvim | endif
 tabnext 1
